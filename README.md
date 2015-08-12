@@ -40,7 +40,7 @@ Note that the data type for base 64 strings has the head `"base64"`.
 The package supports callbacks to simplify event-driven programming. To add a callback simply use `AddCallback[function]` and to remove all callbacks use `ClearCallbacks[]`. Events are fired whenever a function from the API is used, and can generate either success messages or failure messages:
 
     error[<|
-        "event" -> "sending",
+        "event" -> "response",
         "credentials" -> GetCredentials[],
         "method" -> method,
         "params" -> params,
@@ -48,7 +48,7 @@ The package supports callbacks to simplify event-driven programming. To add a ca
         |>];
 
     success[<|
-        "event" -> "sending",
+        "event" -> "response",
         "credentials" -> GetCredentials[],
         "method" -> method,
         "params" -> params,

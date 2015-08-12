@@ -133,7 +133,7 @@ SendRequest[method_, params_] := Module[{event, payload, responsexml},
     Message[SendRequest::failed, responsexml["faultString"]];
 
     event = Global`error[<|
-        "event" -> "sending",
+        "event" -> "response",
         "credentials" -> GetCredentials[],
         "method" -> method,
         "params" -> params,
@@ -145,7 +145,7 @@ SendRequest[method_, params_] := Module[{event, payload, responsexml},
     $Failed,
 
     event = Global`success[<|
-        "event" -> "sending",
+        "event" -> "response",
         "credentials" -> GetCredentials[],
         "method" -> method,
         "params" -> params,
