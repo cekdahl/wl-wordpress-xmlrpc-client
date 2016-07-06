@@ -91,4 +91,4 @@ to get syntax highlighting. Similarly you can use `OutputOpen` and `OutputClose`
  - Links work.
  - Code in input cells and code in output cells will be insert wrapped according to what is said above.
 
-This covers the main features of WordPress' editor's toolbar. There is no intention of adding, say, font or font size because it is the responsibility of the WordPress theme designer to make decisions about such things. Note that if you use features in your notebook that are not supported then you will not be able to upload it.
+This covers the main features of WordPress' editor's toolbar. There is no intention of adding, say, font or font size because it is the responsibility of the WordPress theme designer to make decisions about such things. Note that if a notebook uses features that are not supported then it will not be uploaded.
