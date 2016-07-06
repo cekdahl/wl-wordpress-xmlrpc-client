@@ -21,13 +21,13 @@ I would not use this function. I'll leave it in because things may change. *)
 
 BeginPackage["wp`", {"xmlrpc`"}]
 
-AddCallback::usage = "AddCallback[method] adds a callback to the list of callbacks.";
-ClearCallbacks::usage = "ClearCallbacks[] empties the list of callbacks.";
+AddWordPressCallback::usage = "AddCallback[method] adds a callback to the list of callbacks.";
+ClearWordPressCallbacks::usage = "ClearCallbacks[] empties the list of callbacks.";
 
-SetCredentials::usage = "SetCredentials[username_String, password_String, endpoint_String, blogID_Integer: 1]
-SetCredentials[c_Association] can be used to set or update credentials selectively. Use keys username, passsword, endpoint, and blogID.";
-GetCredentials::usage = "GetCredentials[]";
-ClearCredentials::usage = "ClearCredentials[]";
+SetWordPressCredentials::usage = "SetCredentials[username_String, password_String, endpoint_String, blogID_Integer: 1]
+SetWordPressCredentials[c_Association] can be used to set or update credentials selectively. Use keys username, passsword, endpoint, and blogID.";
+GetWordPressCredentials::usage = "GetCredentials[]";
+ClearWordpressCredentials::usage = "ClearCredentials[]";
 
 getPost::usage = "getPost[postID_Integer]\ngetPost[postID_Integer, fields_List]";
 getPosts::usage = "getPosts[]\ngetPosts[fields_List, filter_Association: <||>]";
@@ -50,6 +50,7 @@ deleteTerm::usage = "deleteTerm[taxonomy_String, termID_Integer]";
 getMediaItem::usage = "getMediaItem[attachmentID_Integer]";
 getMediaLibrary::usage = "getMediaLibrary[filter_Association: <||>]";
 uploadFile::usage = "uploadFile[data_Association]";
+uploadImage::usage = "uploadImage[name_String, image_]"
 
 getCommentCount::usage ="getCommentCount[postID_Integer]";
 getComment::usage = "getComment[commentID_Integer]";
@@ -69,6 +70,9 @@ getProfile::usage = "getProfile[fields_List: {}]";
 editProfile::usage = "editProfile[content_Association]";
 getAuthors::usage = "getAuthors[]";
 
+setCustomField::usage = "setCustomField[postID_Integer, fieldName_String, fieldValue_]";
+getCustomField::usage = "getCustomField[postID_Integer, fieldName_String]";
+
 SendRequest::usage = "SendRequest[method_, params_] Sends a general request using the configured credentials and endpoint."
 
 Begin["`Private`"] (* Begin Private Context *)
@@ -80,31 +84,31 @@ blogID = 1;
 
 callbacks = {};
 
-AddCallback[method_] := AppendTo[callbacks, method]
-ClearCallbacks[] := callbacks = {}
+AddWordPressCallback[method_] := AppendTo[callbacks, method]
+ClearWordPressCallbacks[] := callbacks = {}
 
-SetCredentials[u_String, p_String, e_String, bID_Integer: 1] := (
+SetWordPressCredentials[u_String, p_String, e_String, bID_Integer: 1] := (
   username = u;
   password = p;
   endpoint = e;
   blogID = bID;
 )
 
-SetCredentials[c_Association] := (
+SetWordPressCredentials[c_Association] := (
   If[MatchQ[c["username"], _String], username = c["username"]];
   If[MatchQ[c["password"], _String], password = c["password"]];
   If[MatchQ[c["endpoint"], _String], endpoint = c["endpoint"]];
   If[MatchQ[c["blogID"], _Integer], blogID = c["blogID"]];
 )
 
-GetCredentials[] := <|
+GetWordPressCredentials[] := <|
       "username" -> username,
       "password" -> password,
       "endpoint" -> endpoint,
       "blogID" -> blogID
     |>
 
-ClearCredentials[] := (
+ClearWordPressCredentials[] := (
   username = "";
   password = "";
   endpoint = "";
@@ -206,6 +210,23 @@ getProfile[] := SendRequest["wp.getProfile", {blogID, username, password}]
 getProfile[fields_List] := SendRequest["wp.getProfile", {blogID, username, password, fields}]
 editProfile[content_Association] := SendRequest["wp.editProfile", {blogID, username, password, content}]
 getAuthors[] := SendRequest["wp.getAuthors", {blogID, username, password}]
+
+setCustomField[postID_Integer, fieldName_String, fieldValue_] := SendRequest["wl.setCustomField", {blogID, username, password, postID, fieldName, fieldValue}];
+getCustomField[postID_Integer, fieldName_String] := SendRequest["wl.getCustomField", {blogID, username, password, postID, fieldName}];
+
+uploadImage::fileExtension = "Images can only be exported as .png or .jpg."
+uploadImage[name_, graphics_] := With[{fileFormat = ToLowerCase@FileExtension[name]},
+  If[
+    fileFormat == "png" || fileFormat == "jpg",
+    uploadFile[<|
+        "name" -> name,
+        "type" -> Switch[fileFormat, "png", "image/png", "jpg", "image/jpeg"],
+        "bits" -> "Base64"@ExportString[ExportString[graphics, fileFormat], "Base64"]
+        |>],
+    Message[uploadImage:fileExtension]; $Failed
+  ]
+]
+
 
 End[] (* End Private Context *)
 
