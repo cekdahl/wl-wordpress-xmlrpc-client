@@ -91,8 +91,7 @@ convertNotebook[filePath_, opts: OptionsPattern[]] := With[{nb = NotebookOpen[fi
 ]
 
 uploadNotebook[nb_String, fields_Association: <||>, opts: OptionsPattern[]] := With[{html = convertNotebook[nb, opts]},
-  If[
-    html === $Failed,
+  If[html === $Failed,
     $Failed,
     newPost[<|<|
         "post_type" -> "post",
@@ -104,8 +103,7 @@ uploadNotebook[nb_String, fields_Association: <||>, opts: OptionsPattern[]] := W
 ]
 
 uploadNotebook[nb_String, id_Integer, fields_Association: <||>, opts: OptionsPattern[]] := Module[{html = convertNotebook[nb, opts]},
-  If[
-    html == $Failed,
+  If[html === $Failed,
     $Failed,
     editPost[id, <|<|
         "post_content" -> html
