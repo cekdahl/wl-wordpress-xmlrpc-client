@@ -6,6 +6,12 @@ GPL-2.0+ licensed.
 
 Can be used in Wolfram Language packages or inside Mathematica. It works on Mathematica version 10 or higher.
 
+## Change log
+
+**6/7/2016**: New high-level function, `imageUpload`, for `wp` and a new package, `wpNotebookUpload`, for posting notebooks to WordPress. In addition, [Mathematica Toolbox](https://wordpress.org/plugins/mathematica-toolbox/) users get the new `getCustomField` and `setCustomField` functions. Slight name changes for callback and credentials related functions.
+
+**12/8/2015**: First release, including only `xmlrpc` and `wp`.
+
 ## Usage
 
 Only wp.m needs to be included in order to use the XML-RPC API, as long as xmlrpc.m is in the same folder as wp.m it will also be included.
@@ -14,9 +20,9 @@ Only wp.m needs to be included in order to use the XML-RPC API, as long as xmlrp
 
 Each call made to WordPress' XML-RPC API needs to be authenticated by a username and a password. Conveniently, there is a mechanism for providing this information once such that it will be used in the following requests.
 
-	SetCredentials["username", "password", endpoint]
-	GetCredentials[]
-	ClearCredentials[]
+	SetWordPressCredentials["username", "password", endpoint]
+	GetWordPressCredentials[]
+	ClearWordPressCredentials[]
 
 `SetCredentials` will store said credentials. You can use `?SetCredentials` to view the complete signature for that function (`Association` can also be used.) Use `GetCredentials[]` to view the currently used credentials, and use `ClearCredentials[]` to forget the credentials. `endpoint` is the URL to the the XML-RPC API server; usually it will be of the form `http://example.com/xmlrpc.php`.
 
@@ -37,11 +43,11 @@ The list of elements to retrieve is known as `fields` in the WordPress documenta
 Note that the data type for base 64 strings has the head `"base64"`.
 
 ### Callbacks
-The package supports callbacks to simplify event-driven programming. To add a callback simply use `AddCallback[function]` and to remove all callbacks use `ClearCallbacks[]`. Events are fired whenever a function from the API is used, and can generate either success messages or failure messages:
+The package supports callbacks to simplify event-driven programming. To add a callback simply use `AddWordPressCallback[function]` and to remove all callbacks use `ClearWordPressCallbacks[]`. Events are fired whenever a function from the API is used, and can generate either success messages or failure messages:
 
     error[<|
         "event" -> "response",
-        "credentials" -> GetCredentials[],
+        "credentials" -> GetWordPressCredentials[],
         "method" -> method,
         "params" -> params,
         "responsexml" -> responsexml
@@ -49,7 +55,7 @@ The package supports callbacks to simplify event-driven programming. To add a ca
 
     success[<|
         "event" -> "response",
-        "credentials" -> GetCredentials[],
+        "credentials" -> GetWordPressCredentials[],
         "method" -> method,
         "params" -> params,
         "responsexml" -> responsexml
@@ -59,3 +65,30 @@ Callback function can differentiate between error messages and success messages 
 
 	callback[success[event_]] := CreateDialog[{TextCell["Success!"], DefaultButton[]}];
 	callback[error[event_]] := CreateDialog[{TextCell["Error!"], DefaultButton[]}];
+	
+### Custom XML-RPC calls
+WordPress does not provide a way to get or set custom fields via XML-RPC by default. The WordPress plugin [Mathematica Toolbox](https://wordpress.org/plugins/mathematica-toolbox/) extends the XML-RPC API to make it possible. Therefore, if and only if your blog has this plugin installed, you can use `getCustomField[postID_Integer, fieldName_String]` and `setCustomField[postID_Integer, fieldName_String, fieldValue_]` to get and set custom field.
+
+## wpNotebookUpload
+A package called wpNotebookUpload is bundled with the XML-RPC client. Given the file path to a Mathematica notebook it can convert the content of the notebook into the same HTML that WordPress WYSIWYG editor would generate, and upload it to WordPress. It can be used to either create new posts and pages, or to overwrite existing ones. The commands are
+
+    uploadNotebook[nb_String, fields_Association: <||>, opts: OptionsPattern[]]
+    uploadNotebook[nb_String, id_Integer, fields_Association: <||>, opts: OptionsPattern[]]
+    
+where in the second command `id` is the id of the post to update. `fields` can be used to set the same properties as `newPost` and `editPost`. The options can be used to decide what tag to use to surround input and output code blocks with. By default it's just `<pre><code>code here</pre></code>` but if you have the plugin [Mathematica Toolbox](https://wordpress.org/plugins/mathematica-toolbox/) installed then you'll want perhaps to use
+
+    uploadNotebook[
+     "/path/to/notebook.nb",
+     "InputOpen" -> "[wlcode]",
+     "InputClose" -> "[/wlcode]"
+     ]
+     
+to get syntax highlighting. Similarly you can use `OutputOpen` and `OutputClose` to wrap output code. Here is a list of things `uploadNotebook` will do:
+
+ - Images in output will be uploaded and inserted.
+ - Title, subtitle, subsubtitle, section, subsection, subsubsection will be mapped to h1, h2, h3, h4, h5, h6.
+ - Colored, bold, italic, underlined text works.
+ - Links work.
+ - Code in input cells and code in output cells will be insert wrapped according to what is said above.
+
+This covers the main features of WordPress' editor's toolbar. There is no intention of adding, say, font or font size because it is the responsibility of the WordPress theme designer to make decisions about such things. Note that if you use features in your notebook that are not supported then you will not be able to upload it.
