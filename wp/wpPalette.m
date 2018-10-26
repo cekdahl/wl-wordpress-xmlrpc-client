@@ -337,7 +337,7 @@ WordPressPalette[] := CreateWindow@PaletteNotebook[
     ];
     wpCurrentUser = getCurrentUser[];
     Pane[Column[{
-      ImageResize[Import["wp/Resources/wordpress-logo.jpg"], 160],
+      ImageResize[Import["./Resources/wordpress-logo.jpg"], 160],
       Framed[Column[{
         Row[{Dynamic[
           Style["Current user:\n" <> wpCurrentUser,
