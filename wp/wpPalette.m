@@ -115,7 +115,7 @@ verify[wpEndpoint_, wpUsername_, wpPassword_] := Module[{hello, blogs},
   hello = Quiet@SendRequest["demo.sayHello", {}];
   blogs = Quiet@SendRequest["wp.getUsersBlogs", {wpUsername, wpPassword}];
   Which[
-    hello != "Hello!",
+    hello =!= "Hello!",
     CreateDialog[{
       TextCell["Could not connect to endpoint " <> wpEndpoint],
       DefaultButton[]
