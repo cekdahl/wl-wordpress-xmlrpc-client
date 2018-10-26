@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     19533,        443]
-NotebookOptionsPosition[     19146,        426]
-NotebookOutlinePosition[     19568,        445]
-CellTagsIndexPosition[     19525,        442]
+NotebookDataLength[     20323,        461]
+NotebookOptionsPosition[     19953,        445]
+NotebookOutlinePosition[     20358,        463]
+CellTagsIndexPosition[     20315,        460]
 WindowTitle->WordPress
 WindowFrame->Palette*)
 
@@ -166,9 +166,10 @@ oosuuuiiyy8p/wc69aXQ
                 ButtonBox[
                  StyleBox[
                  "\"Remove credentials\"", FontSize -> 12, StripOnInput -> 
-                  False], 
-                 ButtonFunction :> (wp`wpPalette`removeCredentials[]; 
-                  wp`wpPalette`Private`wpCurrentUser$$ = "None"), ImageSize -> 
+                  False], ButtonFunction :> 
+                 Block[{$ContextPath}, Needs["wp`wpPalette`"]; 
+                   wp`wpPalette`removeCredentials[]; 
+                   wp`wpPalette`Private`wpCurrentUser$$ = "None"], ImageSize -> 
                  140, Appearance -> Automatic, Evaluator -> Automatic, Method -> 
                  "Preemptive"], "\"Remove stored credentials.\"", 
                 TooltipDelay -> Automatic, LabelStyle -> "TextStyling"], 
@@ -223,10 +224,13 @@ oosuuuiiyy8p/wc69aXQ
                     {
                     ButtonBox["\<\"Image\"\>",
                     Appearance->Automatic,
-                    ButtonFunction:>wp`wpPalette`previewImage[
+                    
+                    ButtonFunction:>
+                    Block[{$ContextPath}, Needs["wp`wpPalette`"]; 
+                    wp`wpPalette`previewImage[
                     NotebookRead[
                     SelectedNotebook[]], 
-                    wp`wpPalette`rasterizeSelection[]],
+                    wp`wpPalette`rasterizeSelection[]]],
                     Evaluator->Automatic,
                     ImageSize->140,
                     Method->"Preemptive",
@@ -235,10 +239,12 @@ oosuuuiiyy8p/wc69aXQ
                     {
                     ButtonBox["\<\"Notebook\"\>",
                     Appearance->Automatic,
-                    ButtonFunction:>wp`wpPalette`postNotebook[
-                    NotebookGet[], 
-                    SelectedNotebook[], wp`wpPalette`Private`wpCurrentUser$$],
                     
+                    ButtonFunction:>
+                    Block[{$ContextPath}, Needs["wp`wpPalette`"]; 
+                    wp`wpPalette`postNotebook[
+                    NotebookGet[], 
+                    SelectedNotebook[], wp`wpPalette`Private`wpCurrentUser$$]],
                     Evaluator->Automatic,
                     ImageSize->140,
                     Method->"Preemptive",
@@ -277,17 +283,21 @@ as a blog post.",
              Style["Uploading", FontSize -> 14], 
              Column[{
                Button["Image", 
-                wp`wpPalette`previewImage[
-                 NotebookRead[
-                  SelectedNotebook[]], 
-                 wp`wpPalette`rasterizeSelection[]], Tooltip -> 
+                
+                Block[{$ContextPath}, Needs["wp`wpPalette`"]; 
+                 wp`wpPalette`previewImage[
+                   NotebookRead[
+                    SelectedNotebook[]], 
+                   wp`wpPalette`rasterizeSelection[]]], Tooltip -> 
                 "Upload the selected expression as an image.", TooltipDelay -> 
                 Automatic, ImageSize -> 140], 
                Button["Notebook", 
-                wp`wpPalette`postNotebook[
-                 NotebookGet[], 
-                 SelectedNotebook[], wp`wpPalette`Private`wpCurrentUser$$], 
-                Tooltip -> 
+                
+                Block[{$ContextPath}, Needs["wp`wpPalette`"]; 
+                 wp`wpPalette`postNotebook[
+                   NotebookGet[], 
+                   SelectedNotebook[], wp`wpPalette`Private`wpCurrentUser$$]],
+                 Tooltip -> 
                 "Transform the selected notebook into HTML and upload it as a \
 blog post.", TooltipDelay -> Automatic, ImageSize -> 140]}]}, True]],
           DynamicModuleValues:>{}],
@@ -333,7 +343,10 @@ blog post.", TooltipDelay -> Automatic, ImageSize -> 140]}]}, True]],
                    {
                     ButtonBox["\<\"Settings\"\>",
                     Appearance->Automatic,
-                    ButtonFunction:>wp`wpPalette`settings[],
+                    
+                    ButtonFunction:>
+                    Block[{$ContextPath}, Needs["wp`wpPalette`"]; 
+                    wp`wpPalette`settings[]],
                     Evaluator->Automatic,
                     ImageSize->140,
                     Method->"Preemptive",
@@ -345,9 +358,11 @@ blog post.", TooltipDelay -> Automatic, ImageSize -> 140]}]}, True]],
                     ButtonBox["\<\"Credentials\"\>",
                     Appearance->Automatic,
                     
-                    ButtonFunction:>(wp`wpPalette`credentials[]; 
+                    ButtonFunction:>
+                    Block[{$ContextPath}, Needs["wp`wpPalette`"]; 
+                    wp`wpPalette`credentials[]; 
                     wp`wpPalette`Private`wpCurrentUser$$ = 
-                    wp`wpPalette`Private`getCurrentUser[]),
+                    wp`wpPalette`Private`getCurrentUser[]],
                     Evaluator->Automatic,
                     ImageSize->140,
                     Method->"Preemptive",
@@ -396,13 +411,17 @@ blog post.", TooltipDelay -> Automatic, ImageSize -> 140]}]}, True]],
             Style["Miscellaneous", FontSize -> 14], 
             Column[{
               Button["Settings", 
-               wp`wpPalette`settings[], Tooltip -> 
+               
+               Block[{$ContextPath}, Needs["wp`wpPalette`"]; 
+                wp`wpPalette`settings[]], Tooltip -> 
                "Settings affecting how the uploading functions behave.", 
                TooltipDelay -> Automatic, ImageSize -> 140], 
-              Button[
-              "Credentials", wp`wpPalette`credentials[]; 
-               wp`wpPalette`Private`wpCurrentUser$$ = 
-                wp`wpPalette`Private`getCurrentUser[], Tooltip -> 
+              Button["Credentials", 
+               
+               Block[{$ContextPath}, Needs["wp`wpPalette`"]; 
+                wp`wpPalette`credentials[]; 
+                wp`wpPalette`Private`wpCurrentUser$$ = 
+                 wp`wpPalette`Private`getCurrentUser[]], Tooltip -> 
                "Set login credentials used to connect to WordPress.", 
                TooltipDelay -> Automatic, ImageSize -> 140], 
               Button["About", 
@@ -419,18 +438,17 @@ blog post.", TooltipDelay -> Automatic, ImageSize -> 140]}]}, True]],
           GrayLevel[1]}}},
      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
     "Column"],
-   Initialization :> Needs["wp`wpPalette`"]],
+   Initialization :> (Needs["wp`wpPalette`"]; Null)],
   ImageMargins -> {{5, 5}, {5, 5}},
-  DynamicModuleValues:>{}]],ExpressionUUID->"f30019f1-224f-4992-a860-\
-65bc8dbea371"]
+  DynamicModuleValues:>{}]],ExpressionUUID->"497d893e-3c80-4d2c-aafa-\
+3114a55601dc"]
 },
 WindowSize->All,
-WindowMargins->{{Automatic, 1010}, {Automatic, 278}},
+WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 WindowElements->{},
 WindowTitle->"WordPress",
 Background->GrayLevel[1],
-FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
-2018)",
+FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
 StyleDefinitions->"Palette.nb"
 ]
 (* End of Notebook Content *)
@@ -444,7 +462,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[582, 21, 18560, 403, 352, InheritFromParent,ExpressionUUID->"f30019f1-224f-4992-a860-65bc8dbea371"]
+Cell[582, 21, 19367, 422, 335, InheritFromParent,ExpressionUUID->"497d893e-3c80-4d2c-aafa-3114a55601dc"]
 }
 ]
 *)

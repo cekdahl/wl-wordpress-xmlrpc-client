@@ -4,5 +4,5 @@ Paclet[
   MathematicaVersion -> "11.2+",
   Description -> "",
   Creator -> "",
-  Extensions -> {{"Kernel", Context -> "Creo`"}, {"FrontEnd"}}
+  Extensions -> {{"Kernel", Context -> "wp`"}, {"FrontEnd"}}
 ]
