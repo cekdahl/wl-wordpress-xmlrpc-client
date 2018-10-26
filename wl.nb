@@ -7,55 +7,58 @@ Cell["dev", \
 Cell[BoxData["Quit"], "Input",
  CellLabel->"In[4]:=",ExpressionUUID->"ae1d5fab-ab35-4964-9ba9-273ea2975a97"],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  RowBox[{"SetDirectory", "@", 
   RowBox[{"NotebookDirectory", "[", "]"}]}]], "Input",
- CellLabel->"In[7]:=",ExpressionUUID->"259763a5-2c9b-4822-852a-fbe263862dcc"],
-
-Cell[BoxData["\<\"E:\\\\Idea Projects\\\\wl-wordpress-xmlrpc-client\"\>"], \
-"Output",
- CellLabel->"Out[7]=",ExpressionUUID->"ed285db3-8b6e-469b-8ce2-1cea27069c71"]
-}, Open  ]],
+ CellLabel->"In[1]:=",ExpressionUUID->"259763a5-2c9b-4822-852a-fbe263862dcc"],
 
 Cell[BoxData[
  RowBox[{
   RowBox[{"PrependTo", "[", 
    RowBox[{"$Path", ",", 
     RowBox[{"Directory", "[", "]"}]}], "]"}], ";"}]], "Input",
- CellLabel->"In[8]:=",ExpressionUUID->"7e073d0e-8e03-4707-a64d-967fdecfc475"],
-
-Cell[BoxData[
- RowBox[{"PacletDirectoryAdd", "@", 
-  "FileNameJoin"}]], \
-"Input",ExpressionUUID->"da5e194c-4476-4ed1-abd4-06e60bc4aadd"],
+ CellLabel->"In[2]:=",ExpressionUUID->"7e073d0e-8e03-4707-a64d-967fdecfc475"],
 
 Cell[BoxData[{
  RowBox[{"<<", "wp`"}], "\[IndentingNewLine]", 
  RowBox[{"<<", "wp`wpPalette`"}]}], "Input",
- CellLabel->"In[10]:=",ExpressionUUID->"a6eb9bb3-d742-4fc6-9887-1be228c19a50"],
+ CellLabel->"In[3]:=",ExpressionUUID->"a6eb9bb3-d742-4fc6-9887-1be228c19a50"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{"WordPressPalette", "[", "]"}]], "Input",
- CellLabel->"In[12]:=",ExpressionUUID->"8daaf9a2-4cf9-43bf-af25-1469debbdf4f"],
+ CellLabel->"In[5]:=",ExpressionUUID->"8daaf9a2-4cf9-43bf-af25-1469debbdf4f"],
 
 Cell[BoxData[
  TemplateBox[{FrontEndObject[
-    LinkObject["5w3iu_shm", 3, 1]],56,
-   "FrontEndObject[LinkObject[\"5w3iu_shm\", 3, 1]]","56","\"WordPress\""},
+    LinkObject["8ingv_shm", 3, 1]],82,
+   "FrontEndObject[LinkObject[\"8ingv_shm\", 3, 1]]","82","\"WordPress\""},
   "NotebookObjectUnsaved"]], "Output",
- CellLabel->"Out[12]=",ExpressionUUID->"18de1a15-804b-4624-89e4-27f7d3de4e1e"]
+ CellLabel->"Out[5]=",ExpressionUUID->"e9d23e45-68df-40d7-9d33-72a6b048c1ae"]
 }, Open  ]],
 
 Cell[BoxData["Quit"], "Input",
- CellLabel->"In[13]:=",ExpressionUUID->"310409c0-8540-4da3-a867-1d0225f62454"]
-}, Open  ]]
+ CellLabel->"In[6]:=",ExpressionUUID->"310409c0-8540-4da3-a867-1d0225f62454"],
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "@", 
+  RowBox[{"NotebookDirectory", "[", "]"}]}]], "Input",
+ CellLabel->"In[1]:=",ExpressionUUID->"73e84aee-17c2-4d37-a4cf-30f03dc875e9"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"PrependTo", "[", 
+   RowBox[{"$Path", ",", 
+    RowBox[{"Directory", "[", "]"}]}], "]"}], ";"}]], "Input",
+ CellLabel->"In[2]:=",ExpressionUUID->"31c51a1a-b328-4af5-a044-09bfab0b1089"]
+}, Open  ]],
+
+Cell["deploy", \
+"Subsection",ExpressionUUID->"c74d1492-9496-493d-958a-13c6ead77bf5"]
 },
-WindowSize->{775, 873},
-WindowMargins->{{Automatic, 243}, {-36, Automatic}},
+WindowSize->{1412, 873},
+WindowMargins->{{99, Automatic}, {-8, Automatic}},
 PrivateNotebookOptions->{"FileOutlineCache"->False},
 TrackCellChangeTimes->False,
 FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
