@@ -13,7 +13,7 @@ Original source: https://github.com/paul-jean/blog-this *)
 (* :Keywords:                  *)
 (* :Discussion:                *)
 
-BeginPackage["xmlrpc`"]
+BeginPackage["wp`xmlrpc`"]
 
 xmlrpcencode::usage = "xmlrpcencode[data] turns data into XML-RPC. Allowed data types are integers, reals, strings,\
  data encoded with base64 written as \"Base64\"[string], Hold[DateString[date]], vectors and structs. Vectors are\

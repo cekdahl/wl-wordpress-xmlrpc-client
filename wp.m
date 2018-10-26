@@ -19,7 +19,7 @@ but that's a problem with WordPress and not this XML-RPC client. Similarly setOp
 all, but again will submit the correct XML-RPC to WordPress. At least for the current version of WordPress, v4.2.3,
 I would not use this function. I'll leave it in because things may change. *)
 
-BeginPackage["wp`", {"xmlrpc`"}]
+BeginPackage["wp`", {"wp`xmlrpc`"}]
 
 AddWordPressCallback::usage = "AddCallback[method] adds a callback to the list of callbacks.";
 ClearWordPressCallbacks::usage = "ClearCallbacks[] empties the list of callbacks.";

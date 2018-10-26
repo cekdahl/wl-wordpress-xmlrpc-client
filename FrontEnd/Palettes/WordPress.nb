@@ -1,0 +1,453 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     19533,        443]
+NotebookOptionsPosition[     19146,        426]
+NotebookOutlinePosition[     19568,        445]
+CellTagsIndexPosition[     19525,        442]
+WindowTitle->WordPress
+WindowFrame->Palette*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ DynamicModuleBox[{wp`wpPalette`Private`wpCurrentUser$$ = "None"}, 
+  PaneBox[
+   TagBox[GridBox[{
+      {
+       GraphicsBox[
+        TagBox[RasterBox[CompressedData["
+1:eJztnHlUVVeWxlNda3VMqelUpe1V6VrVVek/SuMqjdGYaNSYxCGJRhHFeR4A
+EUQBo+I8Rg2I8JiUGRUREBAZHHAADXHGWcQBhyjIIDIJIvJu/97dvrueGrVI
+pVJYfffCl/POPffcc/a3h2+fC3l7wrSBdv/2yiuvuDXhY+D4WZ+6uo53H/QG
+XwY7uznYO9tO+tJ5hq29rWunCb+msyP/Ivhnaiu66KKLLrrooosuuuiiiy66
+6KLLi8RoNNar8tAstOn8Z69Ll79LQBAon4PjCwfo0jhFgNO+FhUVZWdn79y5
+M0aV7du3Hzt27Pbt29oA3Z1fIgEsaRQWFkZERLi4uDg6Oi5YsMDPzy8sLCw8
+PDwgIGDhwoVTp06dPn16SEjIjRs3nrhRl0Yr4ralpaUeHh7jx48HysuXL2tX
+q1XRvoJsaGjopEmTVqxYIe6sQ9yYRdDZtWvXyJEjcUwJuVlZWStXrgRrKyur
+3r179+rVq3///mPHjl26dOnevXtlTHR0NLckJiYqamzXY3UjFAHX19cXf8zP
+z6e9adOmQYMGde7c+aOPPurevXuPHj16qULjk08+oZNLYB0cHMzg8vJyJycn
+HFnRIW58ImEZP3Vzc6ORk5MzevToDz/88LPPPvtSlc9V6a2KtKUfrDt16jRk
+yJDvvvuOG5cvX06m1ibUpTGIYBEUFOTq6qqo8fnTTz/FYfv06SOYasg+LVxi
+GI7s7OwsXk/cXrVqlaJD3DhEwjJJdty4cTQyMzO7dOkiwBGKBcSePXtKzxdf
+fCFYS6CmQU/Xrl3h1TKVYDp58mSKKUWnW/9skUR57969MWPG5OXlXbp0CXBx
+XrDDK8GOBoD27dsXiAnFH3/8MVdpcIkB4EubHC2kWo65aNy8eXPUqFF37tz5
+10jEYrcv40bE3aDKXl5eNK5du3b48GFQvnjxYlFRUWBg4Hvvvbd48WIK4evX
+r+fm5mZnZ587d+7ChQsFBQUnTpwAYuAm+WIhGpR1dXV84tEyJ494oP6oDzTK
+T+3DugfPiN61dabTT21kzYO6XywIsPIHDx48Z8DLCDGuZ2trC4KWneA4YcIE
+Gxsb3HPAgAEURzExMdpVFD5//nwKIi0+79+/XzFbS01NzcmTJ/lk2uKSErSS
+lH3e2ie++4ro3p6xn3vG9vg21tqQkHLigijr/K3iKZHbFZP2TJCu2XHky9Wx
+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
+oosuuuiiyy8p/wc69aXQ
+          "], {{0, 53}, {160, 0}}, {0, 255},
+          ColorFunction->RGBColor],
+         BoxForm`ImageTag[
+         "Byte", ColorSpace -> "RGB", ImageResolution -> {300, 300}, 
+          Interleaving -> True],
+         Selectable->False],
+        DefaultBaseStyle->"ImageGraphics",
+        ImageSizeRaw->{160, 53},
+        PlotRange->{{0, 160}, {0, 53}}]},
+      {
+       FrameBox[
+        TagBox[GridBox[{
+           {
+            TemplateBox[{DynamicBox[
+               ToBoxes[
+                Style[
+                 StringJoin[
+                 "Current user:\n", wp`wpPalette`Private`wpCurrentUser$$], 
+                 FontSize -> 12], StandardForm]]},
+             "Row",
+             DisplayFunction->(PaneBox[#, ImageSize -> 140]& ),
+             InterpretationFunction->(RowBox[{"Row", "[", 
+                RowBox[{
+                  RowBox[{"{", #, "}"}], ",", 
+                  RowBox[{"ImageSize", "\[Rule]", "140"}]}], "]"}]& )]},
+           {
+            TemplateBox[{TagBox[
+               TooltipBox[
+                ButtonBox[
+                 StyleBox[
+                 "\"Remove credentials\"", FontSize -> 12, StripOnInput -> 
+                  False], 
+                 ButtonFunction :> (wp`wpPalette`removeCredentials[]; 
+                  wp`wpPalette`Private`wpCurrentUser$$ = "None"), ImageSize -> 
+                 140, Appearance -> Automatic, Evaluator -> Automatic, Method -> 
+                 "Preemptive"], "\"Remove stored credentials.\"", 
+                TooltipDelay -> Automatic, LabelStyle -> "TextStyling"], 
+               Annotation[#, "Remove stored credentials.", "Tooltip"]& ]},
+             "RowDefault"]}
+          },
+          DefaultBaseStyle->"Column",
+          GridBoxAlignment->{"Columns" -> {{Left}}},
+          
+          GridBoxItemSize->{
+           "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+         "Column"],
+        StripOnInput->False]},
+      {
+       PaneBox[
+        TagBox[
+         DynamicModuleBox[{Typeset`var$$ = True}, 
+          InterpretationBox[
+           StyleBox[
+            PaneSelectorBox[{False->GridBox[{
+               {
+                OpenerBox[Dynamic[Typeset`var$$],
+                 Appearance->Automatic,
+                 AutoAction->False,
+                 ContinuousAction->False,
+                 Enabled->Automatic], 
+                StyleBox["\<\"Uploading\"\>",
+                 StripOnInput->False,
+                 FontSize->14]}
+              },
+              AutoDelete->False,
+              BaselinePosition->{1, 1},
+              GridBoxAlignment->{"Columns" -> {{Left}}},
+              GridBoxBackground->{"Columns" -> {{Automatic}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}], 
+             True->GridBox[{
+               {
+                OpenerBox[Dynamic[Typeset`var$$],
+                 Appearance->Automatic,
+                 AutoAction->False,
+                 ContinuousAction->False,
+                 Enabled->Automatic], 
+                StyleBox["\<\"Uploading\"\>",
+                 StripOnInput->False,
+                 FontSize->14]},
+               {"", 
+                PaneBox[
+                 TagBox[GridBox[{
+                    {
+                    ButtonBox["\<\"Image\"\>",
+                    Appearance->Automatic,
+                    ButtonFunction:>wp`wpPalette`previewImage[
+                    NotebookRead[
+                    SelectedNotebook[]], 
+                    wp`wpPalette`rasterizeSelection[]],
+                    Evaluator->Automatic,
+                    ImageSize->140,
+                    Method->"Preemptive",
+                    Tooltip->"Upload the selected expression as an image.",
+                    TooltipDelay->Automatic]},
+                    {
+                    ButtonBox["\<\"Notebook\"\>",
+                    Appearance->Automatic,
+                    ButtonFunction:>wp`wpPalette`postNotebook[
+                    NotebookGet[], 
+                    SelectedNotebook[], wp`wpPalette`Private`wpCurrentUser$$],
+                    
+                    Evaluator->Automatic,
+                    ImageSize->140,
+                    Method->"Preemptive",
+                    
+                    Tooltip->
+                    "Transform the selected notebook into HTML and upload it \
+as a blog post.",
+                    TooltipDelay->Automatic]}
+                   },
+                   DefaultBaseStyle->"Column",
+                   GridBoxAlignment->{"Columns" -> {{Left}}},
+                   
+                   GridBoxItemSize->{
+                    "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                  "Column"],
+                 ImageMargins->0]}
+              },
+              AutoDelete->False,
+              BaselinePosition->{1, 1},
+              GridBoxAlignment->{"Columns" -> {{Left}}},
+              GridBoxBackground->{"Columns" -> {{Automatic}}},
+              
+              GridBoxItemSize->{
+               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+              GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}]}, 
+             Dynamic[Typeset`var$$],
+             Alignment->Automatic,
+             BaseStyle->{},
+             BaselinePosition->Baseline,
+             DefaultBaseStyle->"OpenerView",
+             ImageMargins->0,
+             ImageSize->Automatic],
+            Deployed->False,
+            StripOnInput->False],
+           OpenerView[{
+             Style["Uploading", FontSize -> 14], 
+             Column[{
+               Button["Image", 
+                wp`wpPalette`previewImage[
+                 NotebookRead[
+                  SelectedNotebook[]], 
+                 wp`wpPalette`rasterizeSelection[]], Tooltip -> 
+                "Upload the selected expression as an image.", TooltipDelay -> 
+                Automatic, ImageSize -> 140], 
+               Button["Notebook", 
+                wp`wpPalette`postNotebook[
+                 NotebookGet[], 
+                 SelectedNotebook[], wp`wpPalette`Private`wpCurrentUser$$], 
+                Tooltip -> 
+                "Transform the selected notebook into HTML and upload it as a \
+blog post.", TooltipDelay -> Automatic, ImageSize -> 140]}]}, True]],
+          DynamicModuleValues:>{}],
+         Setting[#, {0}]& ],
+        ImageMargins->{{0, 0}, {5, 5}}]},
+      {
+       TagBox[
+        DynamicModuleBox[{Typeset`var$$ = True}, 
+         InterpretationBox[
+          StyleBox[
+           PaneSelectorBox[{False->GridBox[{
+              {
+               OpenerBox[Dynamic[Typeset`var$$],
+                Appearance->Automatic,
+                AutoAction->False,
+                ContinuousAction->False,
+                Enabled->Automatic], 
+               StyleBox["\<\"Miscellaneous\"\>",
+                StripOnInput->False,
+                FontSize->14]}
+             },
+             AutoDelete->False,
+             BaselinePosition->{1, 1},
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             GridBoxBackground->{"Columns" -> {{Automatic}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+             GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}], 
+            True->GridBox[{
+              {
+               OpenerBox[Dynamic[Typeset`var$$],
+                Appearance->Automatic,
+                AutoAction->False,
+                ContinuousAction->False,
+                Enabled->Automatic], 
+               StyleBox["\<\"Miscellaneous\"\>",
+                StripOnInput->False,
+                FontSize->14]},
+              {"", 
+               PaneBox[
+                TagBox[GridBox[{
+                   {
+                    ButtonBox["\<\"Settings\"\>",
+                    Appearance->Automatic,
+                    ButtonFunction:>wp`wpPalette`settings[],
+                    Evaluator->Automatic,
+                    ImageSize->140,
+                    Method->"Preemptive",
+                    
+                    Tooltip->
+                    "Settings affecting how the uploading functions behave.",
+                    TooltipDelay->Automatic]},
+                   {
+                    ButtonBox["\<\"Credentials\"\>",
+                    Appearance->Automatic,
+                    
+                    ButtonFunction:>(wp`wpPalette`credentials[]; 
+                    wp`wpPalette`Private`wpCurrentUser$$ = 
+                    wp`wpPalette`Private`getCurrentUser[]),
+                    Evaluator->Automatic,
+                    ImageSize->140,
+                    Method->"Preemptive",
+                    
+                    Tooltip->
+                    "Set login credentials used to connect to WordPress.",
+                    TooltipDelay->Automatic]},
+                   {
+                    ButtonBox["\<\"About\"\>",
+                    Appearance->Automatic,
+                    
+                    ButtonFunction:>SystemOpen[
+                    "https://github.com/cekdahl/wl-wordpress-xmlrpc-client"],
+                    Evaluator->Automatic,
+                    ImageSize->140,
+                    Method->"Preemptive",
+                    Tooltip->"Go to this package's Github page.",
+                    TooltipDelay->Automatic]}
+                  },
+                  DefaultBaseStyle->"Column",
+                  GridBoxAlignment->{"Columns" -> {{Left}}},
+                  
+                  GridBoxItemSize->{
+                   "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+                 "Column"],
+                ImageMargins->0]}
+             },
+             AutoDelete->False,
+             BaselinePosition->{1, 1},
+             GridBoxAlignment->{"Columns" -> {{Left}}},
+             GridBoxBackground->{"Columns" -> {{Automatic}}},
+             
+             GridBoxItemSize->{
+              "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
+             GridBoxSpacings->{"Columns" -> {{0.2}}, "Rows" -> {{0.5}}}]}, 
+            Dynamic[Typeset`var$$],
+            Alignment->Automatic,
+            BaseStyle->{},
+            BaselinePosition->Baseline,
+            DefaultBaseStyle->"OpenerView",
+            ImageMargins->0,
+            ImageSize->Automatic],
+           Deployed->False,
+           StripOnInput->False],
+          OpenerView[{
+            Style["Miscellaneous", FontSize -> 14], 
+            Column[{
+              Button["Settings", 
+               wp`wpPalette`settings[], Tooltip -> 
+               "Settings affecting how the uploading functions behave.", 
+               TooltipDelay -> Automatic, ImageSize -> 140], 
+              Button[
+              "Credentials", wp`wpPalette`credentials[]; 
+               wp`wpPalette`Private`wpCurrentUser$$ = 
+                wp`wpPalette`Private`getCurrentUser[], Tooltip -> 
+               "Set login credentials used to connect to WordPress.", 
+               TooltipDelay -> Automatic, ImageSize -> 140], 
+              Button["About", 
+               SystemOpen[
+               "https://github.com/cekdahl/wl-wordpress-xmlrpc-client"], 
+               Tooltip -> "Go to this package's Github page.", TooltipDelay -> 
+               Automatic, ImageSize -> 140]}]}, True]],
+         DynamicModuleValues:>{}],
+        Setting[#, {0}]& ]}
+     },
+     DefaultBaseStyle->"Column",
+     GridBoxAlignment->{"Columns" -> {{Left}}},
+     GridBoxBackground->{"Columns" -> {{
+          GrayLevel[1]}}},
+     GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
+    "Column"],
+   Initialization :> Needs["wp`wpPalette`"]],
+  ImageMargins -> {{5, 5}, {5, 5}},
+  DynamicModuleValues:>{}]],ExpressionUUID->"f30019f1-224f-4992-a860-\
+65bc8dbea371"]
+},
+WindowSize->All,
+WindowMargins->{{Automatic, 1010}, {Automatic, 278}},
+WindowElements->{},
+WindowTitle->"WordPress",
+Background->GrayLevel[1],
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
+StyleDefinitions->"Palette.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[582, 21, 18560, 403, 352, InheritFromParent,ExpressionUUID->"f30019f1-224f-4992-a860-65bc8dbea371"]
+}
+]
+*)
+
+(* End of internal cache information *)
+
