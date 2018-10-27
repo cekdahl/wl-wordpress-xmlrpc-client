@@ -390,6 +390,7 @@ WordPressPalette[] := CreateWindow@PaletteNotebook[
     ],
     ImageMargins -> {{5, 5}, {5, 5}},
     Initialization :> (
+      Needs["wp`wpPalette`"];
       SetWordPressCredentials[
         PersistentValue["wpUsername", "Local"],
         PersistentValue["wpPassword", "Local"],
