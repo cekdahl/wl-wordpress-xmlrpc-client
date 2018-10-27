@@ -115,7 +115,7 @@ verify[wpEndpoint_, wpUsername_, wpPassword_] := Module[{hello, blogs},
   hello = Quiet@SendRequest["demo.sayHello", {}];
   blogs = Quiet@SendRequest["wp.getUsersBlogs", {wpUsername, wpPassword}];
   Which[
-    hello != "Hello!",
+    hello =!= "Hello!",
     CreateDialog[{
       TextCell["Could not connect to endpoint " <> wpEndpoint],
       DefaultButton[]
@@ -337,7 +337,7 @@ WordPressPalette[] := CreateWindow@PaletteNotebook[
     ];
     wpCurrentUser = getCurrentUser[];
     Pane[Column[{
-      ImageResize[Import["wp/Resources/wordpress-logo.jpg"], 160],
+      ImageResize[Import["./Resources/wordpress-logo.jpg"], 160],
       Framed[Column[{
         Row[{Dynamic[
           Style["Current user:\n" <> wpCurrentUser,
