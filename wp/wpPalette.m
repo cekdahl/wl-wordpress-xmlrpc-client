@@ -330,12 +330,6 @@ goToPost[id_String | id_Integer] := With[{post = getPost[ToExpression[id]]}, Sys
 
 WordPressPalette[] := CreateWindow@PaletteNotebook[
   DynamicModule[{wpCurrentUser = ""},
-    SetWordPressCredentials[
-      PersistentValue["wpUsername", "Local"],
-      PersistentValue["wpPassword", "Local"],
-      PersistentValue["wpEndpoint", "Local"]
-    ];
-    wpCurrentUser = getCurrentUser[];
     Pane[Column[{
       ImageResize[Import["./Resources/wordpress-logo.jpg"], 160],
       Framed[Column[{
@@ -394,7 +388,16 @@ WordPressPalette[] := CreateWindow@PaletteNotebook[
       Background -> White
     ], Initialization :> (Needs["wp`wpPalette`"];)
     ],
-    ImageMargins -> {{5, 5}, {5, 5}}],
+    ImageMargins -> {{5, 5}, {5, 5}},
+    Initialization :> (
+      SetWordPressCredentials[
+        PersistentValue["wpUsername", "Local"],
+        PersistentValue["wpPassword", "Local"],
+        PersistentValue["wpEndpoint", "Local"]
+      ];
+      wpCurrentUser = getCurrentUser[];
+    )
+  ],
     Background -> White,
     WindowTitle -> "WordPress"
 ]
