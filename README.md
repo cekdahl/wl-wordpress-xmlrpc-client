@@ -4,9 +4,11 @@ A Wolfram Language client for the [XML-RPC WordPress API](http://codex.wordpress
 
 GPL-2.0+ licensed.
 
-Can be used in Wolfram Language packages or inside Mathematica. It works on Mathematica version 10 or higher.
+Can be used in Wolfram Language packages or inside Mathematica. It works on Mathematica version 11.2 or higher.
 
 ## Change log
+
+**28/10/2018:** A new package, `wpPalette`, provides a palette that uses `wpNotebookUpload` to upload notebooks to WordPress. It is now possible to post copyable code images, as seen on [wolframlanguagereviews.org](wolframlanguagereviews.org). The article [Posting notebooks to WordPress](http://wolframlanguagereviews.org/2018/10/28/posting-notebooks-to-wordpress/) gives a detailed description of what the package does.
 
 **6/7/2016**: New high-level function, `imageUpload`, for `wp` and a new package, `wpNotebookUpload`, for posting notebooks to WordPress. In addition, [Mathematica Toolbox](https://wordpress.org/plugins/mathematica-toolbox/) users get the new `getCustomField` and `setCustomField` functions. Slight name changes for callback and credentials related functions.
 
@@ -92,3 +94,6 @@ to get syntax highlighting. Similarly you can use `OutputOpen` and `OutputClose`
  - Code in input cells and code in output cells will be insert wrapped according to what is said above.
 
 This covers the main features of WordPress' editor's toolbar. There is no intention of adding, say, font or font size because it is the responsibility of the WordPress theme designer to make decisions about such things. Note that if a notebook uses features that are not supported then it will not be uploaded.
+
+## wpPalette
+When installing the paclet, a new palette will appear in the Palettes menu in Mathematica, thanks to the `wpPalette` package. A detailed description of what the package does with screenshots is available in the form of an article at Wolfram Language Reviews, [Posting notebooks to WordPress](http://wolframlanguagereviews.org/2018/10/28/posting-notebooks-to-wordpress/).

@@ -7,7 +7,7 @@
 (* :Date: 2018-07-28 *)
 
 (* :Package Version: 1.0 *)
-(* :Mathematica Version: 10.4 *)
+(* :Mathematica Version: 11.3 *)
 (* :License: GPL-2.0+ *)
 (* :Keywords:  WordPress, notebooks *)
 (* :Discussion: Converts notebooks into suitable HTML and uploads it to WordPress. *)
@@ -161,7 +161,7 @@ previewImage[expr_, img_] := CreateDialog[
             TextCell[{"Failed to upload the image to WordPress."}],
             DefaultButton[]
           }],
-          Print["Success"];
+          
           If[
             inputMarkup,
             CopyToClipboard@StringJoin[
@@ -182,7 +182,8 @@ previewImage[expr_, img_] := CreateDialog[
     WindowTitle -> "Image preview"
   ]
 ]
-previewImage[$Failed] := Beep[]
+previewImage[_, $Failed] := (Beep[]; CreateDialog[{"No cell selected.", DefaultButton[]}])
+previewImage[$Failed, _] := (Beep[]; CreateDialog[{"No cell selected.", DefaultButton[]}])
 
 rasterizeSelection[] := Module[{target, selection, image},
   selection = NotebookRead[SelectedNotebook[]];
@@ -386,9 +387,8 @@ WordPressPalette[] := CreateWindow@PaletteNotebook[
       }, True]
     },
       Background -> White
-    ], Initialization :> (Needs["wp`wpPalette`"];)
+    ], ImageMargins -> {{5, 5}, {5, 5}}
     ],
-    ImageMargins -> {{5, 5}, {5, 5}},
     Initialization :> (
       Needs["wp`wpPalette`"];
       SetWordPressCredentials[
