@@ -10,17 +10,17 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     20323,        461]
-NotebookOptionsPosition[     19953,        445]
-NotebookOutlinePosition[     20358,        463]
-CellTagsIndexPosition[     20315,        460]
+NotebookDataLength[     20586,        467]
+NotebookOptionsPosition[     20204,        450]
+NotebookOutlinePosition[     20621,        469]
+CellTagsIndexPosition[     20578,        466]
 WindowTitle->WordPress
 WindowFrame->Palette*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 Cell[BoxData[
- DynamicModuleBox[{wp`wpPalette`Private`wpCurrentUser$$ = "None"}, 
+ DynamicModuleBox[{wp`wpPalette`Private`wpCurrentUser$$ = "callee"}, 
   PaneBox[
    TagBox[GridBox[{
       {
@@ -438,17 +438,23 @@ blog post.", TooltipDelay -> Automatic, ImageSize -> 140]}]}, True]],
           GrayLevel[1]}}},
      GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
     "Column"],
-   Initialization :> (Needs["wp`wpPalette`"]; Null)],
-  ImageMargins -> {{5, 5}, {5, 5}},
-  DynamicModuleValues:>{}]],ExpressionUUID->"497d893e-3c80-4d2c-aafa-\
-3114a55601dc"]
+   ImageMargins->{{5, 5}, {5, 5}}],
+  DynamicModuleValues:>{},
+  Initialization:>(Needs["wp`wpPalette`"]; wp`SetWordPressCredentials[
+     PersistentValue["wpUsername", "Local"], 
+     PersistentValue["wpPassword", "Local"], 
+     PersistentValue["wpEndpoint", "Local"]]; 
+   wp`wpPalette`Private`wpCurrentUser$$ = 
+    wp`wpPalette`Private`getCurrentUser[]; Null)]],ExpressionUUID->"4971a714-\
+0d3a-4e90-a015-e08da2911e47"]
 },
 WindowSize->All,
 WindowMargins->{{Automatic, 0}, {Automatic, 0}},
 WindowElements->{},
 WindowTitle->"WordPress",
 Background->GrayLevel[1],
-FrontEndVersion->"11.3 for Microsoft Windows (64-bit) (March 6, 2018)",
+FrontEndVersion->"11.3 for Mac OS X x86 (32-bit, 64-bit Kernel) (March 5, \
+2018)",
 StyleDefinitions->"Palette.nb"
 ]
 (* End of Notebook Content *)
@@ -462,7 +468,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[582, 21, 19367, 422, 335, InheritFromParent,ExpressionUUID->"497d893e-3c80-4d2c-aafa-3114a55601dc"]
+Cell[582, 21, 19618, 427, 362, InheritFromParent,ExpressionUUID->"4971a714-0d3a-4e90-a015-e08da2911e47"]
 }
 ]
 *)
