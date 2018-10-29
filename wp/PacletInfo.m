@@ -3,6 +3,6 @@ Paclet[
   Version -> "1.2",
   MathematicaVersion -> "11.2+",
   Description -> "",
-  Creator -> "",
+  Creator -> "Calle Ekdahl",
   Extensions -> {{"Kernel", Context -> "wp`"}, {"FrontEnd"}}
 ]

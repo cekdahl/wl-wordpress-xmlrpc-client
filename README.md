@@ -96,4 +96,4 @@ to get syntax highlighting. Similarly you can use `OutputOpen` and `OutputClose`
 This covers the main features of WordPress' editor's toolbar. There is no intention of adding, say, font or font size because it is the responsibility of the WordPress theme designer to make decisions about such things. Note that if a notebook uses features that are not supported then it will not be uploaded.
 
 ## wpPalette
-When installing the paclet, a new palette will appear in the Palettes menu in Mathematica, thanks to the `wpPalette` package. A detailed description of what the package does with screenshots is available in the form of an article at Wolfram Language Reviews, [Posting notebooks to WordPress](http://wolframlanguagereviews.org/2018/10/28/posting-notebooks-to-wordpress/).
+When installing the paclet, a new palette will appear in the Palettes menu in Mathematica, thanks to the `wpPalette` package. A detailed description of what the package does, with screenshots, is available in the form of an article at Wolfram Language Reviews, [Posting notebooks to WordPress](http://wolframlanguagereviews.org/2018/10/28/posting-notebooks-to-wordpress/).

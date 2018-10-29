@@ -7,17 +7,10 @@ Cell["dev", \
 Cell[BoxData["Quit"], "Input",
  CellLabel->"In[9]:=",ExpressionUUID->"ae1d5fab-ab35-4964-9ba9-273ea2975a97"],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  RowBox[{"SetDirectory", "@", 
   RowBox[{"NotebookDirectory", "[", "]"}]}]], "Input",
  CellLabel->"In[1]:=",ExpressionUUID->"259763a5-2c9b-4822-852a-fbe263862dcc"],
-
-Cell[BoxData["\<\"/Users/Calle/Documents/Mathematica/wl-wordpress-xmlrpc-\
-client\"\>"], "Output",
- CellLabel->"Out[1]=",ExpressionUUID->"fcd7fe68-e4fb-4e71-bbe8-2a350af8ea3b"]
-}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
@@ -26,51 +19,14 @@ Cell[BoxData[
     RowBox[{"Directory", "[", "]"}]}], "]"}], ";"}]], "Input",
  CellLabel->"In[2]:=",ExpressionUUID->"7e073d0e-8e03-4707-a64d-967fdecfc475"],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
  RowBox[{"PacletDirectoryAdd", "@", 
   RowBox[{"NotebookDirectory", "[", "]"}]}]], "Input",
  CellLabel->"In[3]:=",ExpressionUUID->"5fb09c6d-450f-48c8-8adb-2c91bb1153fb"],
 
 Cell[BoxData[
- RowBox[{"{", \
-"\<\"/Users/Calle/Documents/Mathematica/wl-wordpress-xmlrpc-client/\"\>", 
-  "}"}]], "Output",
- CellLabel->"Out[3]=",ExpressionUUID->"3f403b33-5bbe-4c98-95ab-3844c642d543"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
  RowBox[{"PacletFind", "@", "\"\<wp\>\""}]], "Input",
  CellLabel->"In[4]:=",ExpressionUUID->"4a4fac8a-cc8a-47a2-8d8c-67aacabf0132"],
-
-Cell[BoxData[
- RowBox[{"{", 
-  RowBox[{
-   InterpretationBox[
-    RowBox[{
-    "Paclet", "[", "\<\"wp\"\>", ",", "\<\"0.1.0\"\>", ",", "<>", "]"}],
-    PacletManager`Paclet[
-    "Name" -> "wp", "Version" -> "0.1.0", "MathematicaVersion" -> "11.2+", 
-     "Description" -> "", "Creator" -> "", 
-     "Extensions" -> {{"Kernel", "Context" -> "wp`"}, {"FrontEnd"}}, 
-     "Location" -> 
-     "/Users/Calle/Documents/Mathematica/wl-wordpress-xmlrpc-client/wp"]], 
-   ",", 
-   InterpretationBox[
-    RowBox[{
-    "Paclet", "[", "\<\"wp\"\>", ",", "\<\"0.1.0\"\>", ",", "<>", "]"}],
-    PacletManager`Paclet[
-    "Name" -> "wp", "Version" -> "0.1.0", "MathematicaVersion" -> "11.2+", 
-     "Description" -> "", "Creator" -> "", 
-     "Extensions" -> {{"Kernel", "Context" -> "wp`"}, {"FrontEnd"}}, 
-     "Location" -> 
-     "/Users/Calle/Library/Mathematica/Paclets/Repository/wp-0.1.0"]]}], 
-  "}"}]], "Output",
- CellLabel->"Out[4]=",ExpressionUUID->"a4c5e162-5a7b-4c56-a617-d88c17609641"]
-}, Open  ]],
 
 Cell[BoxData[{
  RowBox[{"<<", "wp`"}], "\[IndentingNewLine]", 

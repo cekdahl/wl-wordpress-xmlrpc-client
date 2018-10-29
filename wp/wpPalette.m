@@ -161,7 +161,7 @@ previewImage[expr_, img_] := CreateDialog[
             TextCell[{"Failed to upload the image to WordPress."}],
             DefaultButton[]
           }],
-          
+
           If[
             inputMarkup,
             CopyToClipboard@StringJoin[
